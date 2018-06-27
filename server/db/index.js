@@ -1,6 +1,6 @@
 const conn = require('./conn');
 const Address = require('./Address');
-const Event = require('./Event');
+const Program = require('./Program');
 const Guest = require('./Guest');
 const Room = require('./Room');
 const Stay = require('./Stay');
@@ -16,8 +16,8 @@ Guest.belongsTo(Address);
 Address.hasOne(Guest);
 Address.hasOne(Venue);
 
-Venue.hasMany(Event);
-Event.belongsTo(Venue);
+Venue.hasMany(Program);
+Program.belongsTo(Venue);
 
 Venue.hasMany(Room);
 Room.belongsTo(Venue);
@@ -34,7 +34,7 @@ module.exports = {
   syncAndSeed,
   models: {
     Address,
-    Event,
+    Program,
     Guest,
     Room,
     Stay,
