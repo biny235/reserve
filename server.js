@@ -1,10 +1,4 @@
-const express = require('express');
-const app = express();
-const db = require('./server/db');
-
-db.sync()
-
+const server = require('http').createServer(require('./server/app'));
 
 const PORT = process.env.PORT || 3000;
-
-app.listen(PORT, () => console.log(`listening on port ${PORT}`) );
+server.listen(PORT, () => console.log(`listening on port ${PORT}`))

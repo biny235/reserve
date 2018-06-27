@@ -26,6 +26,10 @@ const Guest = conn.define('guest', {
       isEmail: true
     }
   },
+  age: {
+    type: Sequelize.INTEGER,
+    allowNull: false,
+  }
 
 })
 
