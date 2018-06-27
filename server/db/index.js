@@ -7,7 +7,7 @@ const Stay = require('./Stay');
 const User = require('./User');
 const Venue = require('./Venue');
 
-const syncAndSeed = () => {
+const sync = () => {
   return conn.sync( { force: true } )
 }
 
@@ -31,7 +31,7 @@ Stay.belongsTo(Room);
 Guest.belongsTo(Guest, {as: 'familyMember'});
 
 module.exports = {
-  syncAndSeed,
+  sync,
   models: {
     Address,
     Program,

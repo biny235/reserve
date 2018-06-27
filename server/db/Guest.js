@@ -9,19 +9,19 @@ const Guest = conn.define('guest', {
   },
   lastName: {
     type: Sequelize.STRING,
-    require: true,
+    allowNull: false,
   },
   firstName: {
     type: Sequelize.STRING,
-    require: true,
+    allowNull: false,
   },
   phone: {
     type: Sequelize.INTEGER,
-    require: true,
+    allowNull: false,
   },
   email: {
     type: Sequelize.INTEGER,
-    require: true,
+    allowNull: false,
     validate: {
       isEmail: true
     }

@@ -5,14 +5,14 @@ const { Sequelize } = conn;
 const address = conn.define('address', {
   lineOne: {
     type: Sequelize.STRING,
-    require: true
+    allowNull: false
   },
   lineTwo: {
     type: Sequelize.STRING,
   },
   city: {
     type: Sequelize.STRING,
-    require: true
+    allowNull: false
   },
   state: {
     type: Sequelize.STRING,

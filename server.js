@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const db = require('./server/db');
 
-db.syncAndSeed()
+db.sync()
 
 
 const PORT = process.env.PORT || 3000;

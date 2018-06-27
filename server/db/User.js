@@ -5,14 +5,14 @@ const User = conn.define('user', {
   username: {
     type: Sequelize.STRING,
     unique: true,
-    require: true
+    allowNull: false
   },
   password: {
     type: Sequelize.STRING
   },
   email: {
     type: Sequelize.STRING,
-    require: true,
+    allowNull: false,
     validate: {
       isEmail: true
     }
