@@ -12,9 +12,10 @@ const sync = () => {
 }
 
 Venue.belongsTo(Address);
+Address.hasOne(Venue);
+
 Guest.belongsTo(Address);
 Address.hasOne(Guest);
-Address.hasOne(Venue);
 
 Venue.hasMany(Program);
 Program.belongsTo(Venue);
@@ -28,7 +29,10 @@ Stay.belongsTo(Guest);
 Room.hasMany(Stay);
 Stay.belongsTo(Room);
 
-Guest.belongsTo(Guest, {as: 'familyMember'});
+Program.hasMany(Stay);
+Stay.belongsTo(Program);
+
+Guest.belongsTo(Guest, { as: 'familyMember' });
 
 module.exports = {
   sync,

@@ -20,7 +20,7 @@ const Guest = conn.define('guest', {
     allowNull: false,
   },
   email: {
-    type: Sequelize.INTEGER,
+    type: Sequelize.STRING,
     allowNull: false,
     validate: {
       isEmail: true

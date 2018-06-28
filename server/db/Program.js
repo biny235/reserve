@@ -1,7 +1,7 @@
 const conn = require('./conn');
 const { Sequelize } = conn;
 
-const Program = conn.define('event', {
+const Program = conn.define('program', {
   name: Sequelize.STRING,
   beginDate: {
     type: Sequelize.DATE
